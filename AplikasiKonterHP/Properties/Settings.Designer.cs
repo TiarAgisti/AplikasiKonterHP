@@ -70,5 +70,17 @@ namespace AplikasiKonterHP.Properties {
                 this["Password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Konter Hp")]
+        public string title {
+            get {
+                return ((string)(this["title"]));
+            }
+            set {
+                this["title"] = value;
+            }
+        }
     }
 }

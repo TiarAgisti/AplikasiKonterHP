@@ -6,6 +6,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using System.Windows.Forms;
 
     public class Provider
     {
@@ -71,6 +72,15 @@
                                   }).ToList();
             }
             return myList;
+        }
+
+        public static void ComboBoxProvider(ComboBox cmb)
+        {
+            cmb.DataSource = GetListProvider(2);
+            cmb.ValueMember = "IdProvider";
+            cmb.DisplayMember = "NamaProvider";
+            cmb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmb.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         public static Boolean InsertData(Provider provider)

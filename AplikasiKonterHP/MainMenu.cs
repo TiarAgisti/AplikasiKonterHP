@@ -27,5 +27,22 @@ namespace AplikasiKonterHP
             FrmProvider frm = new FrmProvider();
             frm.Show();
         }
+
+        private void menuRekanan_Click(object sender, EventArgs e)
+        {
+            FrmRekanan frm = new FrmRekanan();
+            frm.Show();
+        }
+
+        private void menuKeluar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void menuMasterPulsa_Click(object sender, EventArgs e)
+        {
+            FrmMasterPulsa frm = new FrmMasterPulsa();
+            frm.Show();
+        }
     }
 }

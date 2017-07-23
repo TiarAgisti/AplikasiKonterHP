@@ -1,5 +1,6 @@
 ﻿namespace AplikasiKonterHP
 {
+    using Properties;
     using System;
     using System.Windows.Forms;
 
@@ -8,6 +9,7 @@
     {
         #region Declaration
         public static ErrorProvider myError = new ErrorProvider();
+        public static string myTitle = Settings.Default.title;
         #endregion
 
         #region Security Methods
@@ -162,7 +164,7 @@
                 return false;
         }
 
-        public static void EventTextChange(TextBox txt)
+        public static void CheckValidationNumber(TextBox txt)
         {
             if (!string.IsNullOrEmpty(txt.Text))
             {
@@ -172,6 +174,8 @@
                     txt.Focus();
             }
         }
+
+
         #endregion
     }
 }

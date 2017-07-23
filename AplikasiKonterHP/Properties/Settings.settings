@@ -14,5 +14,8 @@
     <Setting Name="Password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="title" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Konter Hp</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
