@@ -1,4 +1,4 @@
-﻿namespace AplikasiKonterHP.Forms
+﻿namespace AplikasiKonterHP
 {
     partial class FrmListTopupPulsa
     {
@@ -30,22 +30,22 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmbJenisTopup = new System.Windows.Forms.ComboBox();
+            this.chkJenis = new System.Windows.Forms.CheckBox();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnCari = new System.Windows.Forms.Button();
+            this.txtNamaRekanan = new System.Windows.Forms.TextBox();
             this.chkNama = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpTglTopup = new System.Windows.Forms.DateTimePicker();
             this.chkTopup = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnKeluar = new System.Windows.Forms.Button();
+            this.btnLihat = new System.Windows.Forms.Button();
+            this.btnTambah = new System.Windows.Forms.Button();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,13 +63,13 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.cmbJenisTopup);
+            this.panel1.Controls.Add(this.chkJenis);
+            this.panel1.Controls.Add(this.btnHapus);
+            this.panel1.Controls.Add(this.btnCari);
+            this.panel1.Controls.Add(this.txtNamaRekanan);
             this.panel1.Controls.Add(this.chkNama);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtpTglTopup);
             this.panel1.Controls.Add(this.chkTopup);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 46);
@@ -77,30 +77,50 @@
             this.panel1.Size = new System.Drawing.Size(772, 122);
             this.panel1.TabIndex = 3;
             // 
-            // button2
+            // cmbJenisTopup
             // 
-            this.button2.Location = new System.Drawing.Point(199, 90);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Hapus";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cmbJenisTopup.FormattingEnabled = true;
+            this.cmbJenisTopup.Location = new System.Drawing.Point(118, 35);
+            this.cmbJenisTopup.Name = "cmbJenisTopup";
+            this.cmbJenisTopup.Size = new System.Drawing.Size(200, 21);
+            this.cmbJenisTopup.TabIndex = 11;
             // 
-            // button1
+            // chkJenis
             // 
-            this.button1.Location = new System.Drawing.Point(118, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Cari";
-            this.button1.UseVisualStyleBackColor = true;
+            this.chkJenis.AutoSize = true;
+            this.chkJenis.Location = new System.Drawing.Point(11, 37);
+            this.chkJenis.Name = "chkJenis";
+            this.chkJenis.Size = new System.Drawing.Size(84, 17);
+            this.chkJenis.TabIndex = 6;
+            this.chkJenis.Text = "Jenis Topup";
+            this.chkJenis.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // btnHapus
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 20);
-            this.textBox1.TabIndex = 3;
+            this.btnHapus.Location = new System.Drawing.Point(199, 90);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(75, 23);
+            this.btnHapus.TabIndex = 5;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = true;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            // 
+            // btnCari
+            // 
+            this.btnCari.Location = new System.Drawing.Point(118, 90);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.Size = new System.Drawing.Size(75, 23);
+            this.btnCari.TabIndex = 4;
+            this.btnCari.Text = "Cari";
+            this.btnCari.UseVisualStyleBackColor = true;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // txtNamaRekanan
+            // 
+            this.txtNamaRekanan.Location = new System.Drawing.Point(118, 62);
+            this.txtNamaRekanan.Name = "txtNamaRekanan";
+            this.txtNamaRekanan.Size = new System.Drawing.Size(346, 20);
+            this.txtNamaRekanan.TabIndex = 3;
             // 
             // chkNama
             // 
@@ -112,12 +132,12 @@
             this.chkNama.Text = "Nama Rekanan";
             this.chkNama.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpTglTopup
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(118, 9);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpTglTopup.Location = new System.Drawing.Point(118, 9);
+            this.dtpTglTopup.Name = "dtpTglTopup";
+            this.dtpTglTopup.Size = new System.Drawing.Size(200, 20);
+            this.dtpTglTopup.TabIndex = 1;
             // 
             // chkTopup
             // 
@@ -132,75 +152,60 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btnKeluar);
+            this.panel2.Controls.Add(this.btnLihat);
+            this.panel2.Controls.Add(this.btnTambah);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 168);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(772, 56);
             this.panel2.TabIndex = 4;
             // 
-            // button5
+            // btnKeluar
             // 
-            this.button5.Location = new System.Drawing.Point(172, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Keluar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnKeluar.Location = new System.Drawing.Point(172, 16);
+            this.btnKeluar.Name = "btnKeluar";
+            this.btnKeluar.Size = new System.Drawing.Size(75, 23);
+            this.btnKeluar.TabIndex = 7;
+            this.btnKeluar.Text = "Keluar";
+            this.btnKeluar.UseVisualStyleBackColor = true;
+            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
             // 
-            // button4
+            // btnLihat
             // 
-            this.button4.Location = new System.Drawing.Point(91, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Lihat";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnLihat.Location = new System.Drawing.Point(91, 16);
+            this.btnLihat.Name = "btnLihat";
+            this.btnLihat.Size = new System.Drawing.Size(75, 23);
+            this.btnLihat.TabIndex = 7;
+            this.btnLihat.Text = "Lihat";
+            this.btnLihat.UseVisualStyleBackColor = true;
+            this.btnLihat.Click += new System.EventHandler(this.btnLihat_Click);
             // 
-            // button3
+            // btnTambah
             // 
-            this.button3.Location = new System.Drawing.Point(10, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Tambah";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTambah.Location = new System.Drawing.Point(10, 16);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(75, 23);
+            this.btnTambah.TabIndex = 6;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = true;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 224);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(772, 319);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(11, 35);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(84, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Jenis Topup";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 11;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 224);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(772, 319);
+            this.dgv.TabIndex = 5;
             // 
             // FrmListTopupPulsa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 543);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -210,10 +215,11 @@
             this.Name = "FrmListTopupPulsa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmListTopupPulsa";
+            this.Load += new System.EventHandler(this.FrmListTopupPulsa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,18 +228,18 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.Button btnCari;
+        private System.Windows.Forms.TextBox txtNamaRekanan;
         private System.Windows.Forms.CheckBox chkNama;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpTglTopup;
         private System.Windows.Forms.CheckBox chkTopup;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnKeluar;
+        private System.Windows.Forms.Button btnLihat;
+        private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.CheckBox chkJenis;
+        private System.Windows.Forms.ComboBox cmbJenisTopup;
     }
 }

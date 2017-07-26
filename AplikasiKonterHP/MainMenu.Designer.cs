@@ -35,6 +35,7 @@
             this.menuMasterPulsa = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTransaksi = new System.Windows.Forms.ToolStripMenuItem();
             this.menuKeluar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuTopupSaldo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,12 +78,14 @@
             // menuMasterPulsa
             // 
             this.menuMasterPulsa.Name = "menuMasterPulsa";
-            this.menuMasterPulsa.Size = new System.Drawing.Size(152, 22);
+            this.menuMasterPulsa.Size = new System.Drawing.Size(141, 22);
             this.menuMasterPulsa.Text = "Master Pulsa";
             this.menuMasterPulsa.Click += new System.EventHandler(this.menuMasterPulsa_Click);
             // 
             // menuTransaksi
             // 
+            this.menuTransaksi.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuTopupSaldo});
             this.menuTransaksi.Name = "menuTransaksi";
             this.menuTransaksi.Size = new System.Drawing.Size(67, 20);
             this.menuTransaksi.Text = "Transaksi";
@@ -94,6 +97,13 @@
             this.menuKeluar.Text = "Keluar";
             this.menuKeluar.Click += new System.EventHandler(this.menuKeluar_Click);
             // 
+            // menuTopupSaldo
+            // 
+            this.menuTopupSaldo.Name = "menuTopupSaldo";
+            this.menuTopupSaldo.Size = new System.Drawing.Size(152, 22);
+            this.menuTopupSaldo.Text = "Topup Saldo";
+            this.menuTopupSaldo.Click += new System.EventHandler(this.menuTopupSaldo_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +114,7 @@
             this.Name = "MainMenu";
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -121,6 +132,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuMasterPulsa;
         private System.Windows.Forms.ToolStripMenuItem menuTransaksi;
         private System.Windows.Forms.ToolStripMenuItem menuKeluar;
+        private System.Windows.Forms.ToolStripMenuItem menuTopupSaldo;
     }
 }
 

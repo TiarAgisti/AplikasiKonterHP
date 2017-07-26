@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AplikasiKonterHP
@@ -43,6 +43,17 @@ namespace AplikasiKonterHP
         {
             FrmMasterPulsa frm = new FrmMasterPulsa();
             frm.Show();
+        }
+
+        private void menuTopupSaldo_Click(object sender, EventArgs e)
+        {
+            FrmListTopupPulsa frm = new FrmListTopupPulsa();
+            frm.Show();
+        }
+
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

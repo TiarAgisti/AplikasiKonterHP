@@ -4,8 +4,7 @@
     using System.Data;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using System.Windows.Forms;
 
     public class Rekanan
     {
@@ -105,7 +104,15 @@
             return myList;
         }
 
-
+        public static void ComboBoxAllRekanan(ComboBox cmb)
+        {
+            cmb.DataSource = GetListRekanan(2);
+            cmb.ValueMember = "IdRekanan";
+            cmb.DisplayMember = "NamaRekanan";
+            cmb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmb.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+        
         public static Boolean InsertData(Rekanan rekanan)
         {
             string sql = "Insert into Rekanan values('" + rekanan.IdRekanan + "','" + rekanan.TipeRekanan + "','" + rekanan.NamaRekanan + "'" +

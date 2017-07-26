@@ -1,4 +1,4 @@
-﻿namespace AplikasiKonterHP.Forms
+﻿namespace AplikasiKonterHP
 {
     partial class FrmTopupPulsa
     {
@@ -30,18 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbNama = new System.Windows.Forms.ComboBox();
+            this.cmbJenis = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtJumlah = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpTgl = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnKeluar = new System.Windows.Forms.Button();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnSimpan = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,13 +61,13 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmbNama);
+            this.panel1.Controls.Add(this.cmbJenis);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtJumlah);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtpTgl);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 46);
@@ -75,16 +75,31 @@
             this.panel1.Size = new System.Drawing.Size(307, 131);
             this.panel1.TabIndex = 4;
             // 
-            // comboBox1
+            // cmbNama
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbNama.FormattingEnabled = true;
+            this.cmbNama.Items.AddRange(new object[] {
             "Topup",
             "Transfer"});
-            this.comboBox1.Location = new System.Drawing.Point(91, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 10;
+            this.cmbNama.Location = new System.Drawing.Point(91, 62);
+            this.cmbNama.Name = "cmbNama";
+            this.cmbNama.Size = new System.Drawing.Size(200, 21);
+            this.cmbNama.TabIndex = 11;
+            this.cmbNama.SelectedIndexChanged += new System.EventHandler(this.cmbNama_SelectedIndexChanged);
+            this.cmbNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbNama_KeyPress);
+            // 
+            // cmbJenis
+            // 
+            this.cmbJenis.FormattingEnabled = true;
+            this.cmbJenis.Items.AddRange(new object[] {
+            "Topup",
+            "Transfer"});
+            this.cmbJenis.Location = new System.Drawing.Point(91, 35);
+            this.cmbJenis.Name = "cmbJenis";
+            this.cmbJenis.Size = new System.Drawing.Size(200, 21);
+            this.cmbJenis.TabIndex = 10;
+            this.cmbJenis.SelectedIndexChanged += new System.EventHandler(this.cmbJenis_SelectedIndexChanged);
+            this.cmbJenis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbJenis_KeyPress);
             // 
             // label5
             // 
@@ -95,12 +110,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Jenis Topup";
             // 
-            // textBox2
+            // txtJumlah
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtJumlah.Location = new System.Drawing.Point(91, 89);
+            this.txtJumlah.Name = "txtJumlah";
+            this.txtJumlah.Size = new System.Drawing.Size(200, 20);
+            this.txtJumlah.TabIndex = 6;
+            this.txtJumlah.TextChanged += new System.EventHandler(this.txtJumlah_TextChanged);
+            this.txtJumlah.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJumlah_KeyPress);
             // 
             // label4
             // 
@@ -120,12 +137,13 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Nama Rekanan";
             // 
-            // dateTimePicker1
+            // dtpTgl
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(91, 9);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpTgl.Location = new System.Drawing.Point(91, 9);
+            this.dtpTgl.Name = "dtpTgl";
+            this.dtpTgl.Size = new System.Drawing.Size(200, 20);
+            this.dtpTgl.TabIndex = 1;
+            this.dtpTgl.ValueChanged += new System.EventHandler(this.dtpTgl_ValueChanged);
             // 
             // label2
             // 
@@ -139,7 +157,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnKeluar);
             this.panel2.Controls.Add(this.btnHapus);
             this.panel2.Controls.Add(this.btnSimpan);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -148,14 +166,15 @@
             this.panel2.Size = new System.Drawing.Size(307, 35);
             this.panel2.TabIndex = 5;
             // 
-            // button2
+            // btnKeluar
             // 
-            this.button2.Location = new System.Drawing.Point(167, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Keluar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnKeluar.Location = new System.Drawing.Point(167, 4);
+            this.btnKeluar.Name = "btnKeluar";
+            this.btnKeluar.Size = new System.Drawing.Size(75, 23);
+            this.btnKeluar.TabIndex = 6;
+            this.btnKeluar.Text = "Keluar";
+            this.btnKeluar.UseVisualStyleBackColor = true;
+            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
             // 
             // btnHapus
             // 
@@ -165,6 +184,7 @@
             this.btnHapus.TabIndex = 4;
             this.btnHapus.Text = "Hapus";
             this.btnHapus.UseVisualStyleBackColor = true;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnSimpan
             // 
@@ -174,17 +194,7 @@
             this.btnSimpan.TabIndex = 5;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Topup",
-            "Transfer"});
-            this.comboBox2.Location = new System.Drawing.Point(91, 62);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 21);
-            this.comboBox2.TabIndex = 11;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // FrmTopupPulsa
             // 
@@ -200,6 +210,7 @@
             this.Name = "FrmTopupPulsa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTopupPulsa";
+            this.Load += new System.EventHandler(this.FrmTopupPulsa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -211,17 +222,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtJumlah;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpTgl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnKeluar;
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnSimpan;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbJenis;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbNama;
     }
 }
